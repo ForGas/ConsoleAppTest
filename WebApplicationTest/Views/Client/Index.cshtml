@@ -1,0 +1,32 @@
+﻿@using ConsoleAppTest.Data.Model
+
+@model List<BankClient>
+
+
+<table id="table" class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Iin</th>
+            <th scope="col">Date Of Birth</th>
+            <th scope="col">City Id</th>
+            <th scope="col">Country Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var city in Model)
+        {
+            <tr>
+                <th scope="row">@city.Id</th>
+                <td>@city.FullName</td>
+                <td>@city.Address</td>
+                <td>@city.Iin</td>
+                <td>@city.DateOfBirth</td>
+                <td>@city.CityId</td>
+                <td>@city.CountryId</td>
+            </tr>
+        }
+    </tbody>
+</table>

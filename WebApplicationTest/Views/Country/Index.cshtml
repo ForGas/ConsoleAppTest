@@ -1,0 +1,24 @@
+﻿@using ConsoleAppTest.Data.Model
+
+@model List<Country>
+
+
+<table id="table" class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var country in Model)
+        {
+            <tr>
+                <th scope="row">@country.Id</th>
+                <td>@country.Name</td>
+                <td>@country.Code</td>
+            </tr>
+        }
+    </tbody>
+</table>
