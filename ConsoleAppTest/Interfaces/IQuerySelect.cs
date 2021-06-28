@@ -4,6 +4,8 @@
     {
         public void ShowData();
         public void ShowDataBase();
-        public void ShoDataViaView();
+        public void ShowDataViaView();
+        public void ShowBalanceByCity();
+        public void ShowBalanceByCityViaView();
     }
 }

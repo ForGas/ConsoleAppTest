@@ -16,7 +16,7 @@ namespace ConsoleAppTest.Data.Model.Configurations
             builder.Property(x => x.RecipientAccountId);
 
             builder.Property(x => x.Sum).HasPrecision(29, 2);
-            builder.Property(x => x.Operation).HasDefaultValue(Operation.Transfer);
+            builder.Property(x => x.Operation);
 
             builder.HasIndex(x => x.Id);
         }

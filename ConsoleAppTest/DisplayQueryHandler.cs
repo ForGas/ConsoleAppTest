@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using ConsoleAppTest.Data;
+using ConsoleAppTest.Data.Model;
 using ConsoleAppTest.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,53 @@ namespace ConsoleAppTest
         {
             _context = context;
             _display = display;
+        }
+
+        public void ShowBalanceByCity()
+        {
+
+            var accounts = from account in _context.Accounts
+                           join city in _context.Cities
+                           on account.ClientId equals (from id in _context.BankClients
+                                                                .Where(x => x.CityId == city.Id)
+                                                                .Select(x => x.Id)
+                                                       select id).First()
+                           join country in _context.Countries
+                           on account.ClientId equals (from id in _context.BankClients
+                                                               .Where(x => x.CountryId == country.Id)
+                                                               .Select(x => x.Id)
+                                                       select id).First()
+
+                           select new AccountCityGroup
+                           {
+                               TotalSum = account.Balance,
+                               Country = country.Name,
+                               City = city.Name
+                           };
+
+            var gg = from account in accounts.GroupBy(x => x.City)
+                     select new { Balance = account.Sum(x => x.TotalSum) };
+
+            _display.Print(accounts.ToList());
+        }
+
+        public void ShowBalanceByCityViaView()
+        {
+
+            _context.Database.ExecuteSqlRaw(@"CREATE OR REPLACE VIEW View_BalanceByCity AS
+                            SELECT Sum(Balance) AS TotalSum, Cities.Name AS City, Countries.Name AS Country
+                            FROM Accounts
+                            INNER JOIN Cities 
+                            ON ClientId = (select Id FROM bank_clients where CityId = Cities.Id limit 1)
+                            INNER JOIN Countries 
+                            ON ClientId = (select Id FROM bank_clients where CountryId = Countries.Id limit 1)
+                            group by Cities.Name");
+
+
+            var balanceByCityData = _context.BalanceByCity.ToList();
+
+            _display.Print(balanceByCityData);
+
         }
 
         public void ShowDataBase()
@@ -34,9 +82,25 @@ namespace ConsoleAppTest
             _display.Print(transactions);
         }
 
-        public void ShoDataViaView()
+        public void ShowDataViaView()
         {
-            _context.Database.ExecuteSqlRaw(@"CREATE VIEW View_ShowDataAll AS SELECT");
+            _context.Database.ExecuteSqlRaw(@"CREATE OR REPLACE VIEW View_BankData AS
+                                            SELECT Client.FullName As Name, Client.Address, Client.Iin, 
+                                            CAST(Client.DateOfBirth AS DATE) AS DateOfBirth, 
+                                            City.Name AS City, City.Code AS CityCode,
+                                            Country.Name AS Country, Country.Code AS CountryCode,
+                                            Account.Balance, Account.Number
+                                            FROM bank_clients AS Client
+                                            INNER JOIN cities AS City ON
+                                            CityId = City.Id
+                                            INNER JOIN countries AS Country ON
+                                            CountryId = Country.Id
+                                            LEFT JOIN accounts AS Account ON
+                                            Client.Id = Account.ClientId");
+
+            var data = _context.BankData.ToList();
+
+            _display.Print(data);
         }
 
         public void ShowData()

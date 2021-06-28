@@ -10,5 +10,7 @@ namespace ConsoleAppTest.Interfaces
         public void Print(ICollection<City> cities);
         public void Print(ICollection<Country> countries);
         public void Print(ICollection<AccountTransaction> transactions);
+        public void Print(ICollection<AccountCityGroup> group);
+        public void Print(ICollection<BankDataGroup> group);
     }
 }

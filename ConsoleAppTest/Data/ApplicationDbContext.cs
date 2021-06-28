@@ -12,6 +12,8 @@ namespace ConsoleAppTest.Data
         public DbSet<Account> Accounts { get; set; }
         public DbSet<BankClient> BankClients { get; set; }
         public DbSet<AccountTransaction> AccountTransactions { get; set; }
+        public DbSet<AccountCityGroup> BalanceByCity { get; set; }
+        public DbSet<BankDataGroup> BankData { get; set; }
 
         public ApplicationDbContext()
         {
