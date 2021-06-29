@@ -1,0 +1,8 @@
+ALTER TABLE Cities 
+ADD PRIMARY KEY (id);
+
+ALTER TABLE Countries 
+ADD PRIMARY KEY (id);
+
+ALTER TABLE Bank_Clients 
+ADD PRIMARY KEY (id);

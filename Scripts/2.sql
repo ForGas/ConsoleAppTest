@@ -1,0 +1,10 @@
+CREATE TABLE Bank_Clients  (
+	Id  BIGINT IDENTITY (1, 1) NOT NUll,
+	CityId BIGINT NULL,
+	CountryId BIGINT NULL,
+	FullName NVARCHAR (400) NULL,
+	Address  NVARCHAR (300) NULL,
+	Iin  NVARCHAR (12) NULL,
+	DateOfBirth DATETIME2 (0) NULL,
+	PRIMARY KEY (Id)
+);

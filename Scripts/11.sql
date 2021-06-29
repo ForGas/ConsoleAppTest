@@ -1,0 +1,7 @@
+CREATE TABLE Accounts (
+	Id BIGINT IDENTITY (1, 1) NOT NUll,
+	ClientId BIGINT NULL,
+	Number NVARCHAR(15) NULL,
+	Balance DECIMAL(18,1) NULL, 
+	PRIMARY KEY (Id)
+);
