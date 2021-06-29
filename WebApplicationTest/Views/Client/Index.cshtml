@@ -2,6 +2,11 @@
 
 @model List<BankClient>
 
+@section Style {
+    <link href="~/css/client.css" rel="stylesheet" />
+    <script src="~/js/client.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+}
 
 <table id="table" class="table table-striped table-hover">
     <thead>
@@ -13,19 +18,36 @@
             <th scope="col">Date Of Birth</th>
             <th scope="col">City Id</th>
             <th scope="col">Country Id</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var city in Model)
+        @foreach (var client in Model)
         {
-            <tr>
-                <th scope="row">@city.Id</th>
-                <td>@city.FullName</td>
-                <td>@city.Address</td>
-                <td>@city.Iin</td>
-                <td>@city.DateOfBirth</td>
-                <td>@city.CityId</td>
-                <td>@city.CountryId</td>
+            <tr id="@client.Id">
+                <th scope="row">@client.Id</th>
+                <td>@client.FullName</td>
+                <td>@client.Address</td>
+                <td>@client.Iin</td>
+                <td>@client.DateOfBirth</td>
+                <td>@client.CityId</td>
+                <td>@client.CountryId</td>
+                <td>
+                    <button type="button" class="btn btn-primary">
+                        @Html.ActionLink("", "View", new { Id = @client.Id })
+                        <i class="far fa-eye">
+                            @Html.ActionLink("", "View", new { Id = @client.Id })
+                        </i>
+                    </button>
+                    <button type="button" class="btn btn-success">
+                        <i class="fas fa-edit">
+                            @Html.ActionLink("", "Edit", new { Id = @client.Id })
+                        </i>
+                    </button>
+                    <button type="button" class="btn btn-danger delete" client-id="@client.Id">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </td>
             </tr>
         }
     </tbody>
