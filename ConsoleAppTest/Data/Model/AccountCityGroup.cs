@@ -1,6 +1,8 @@
-﻿namespace ConsoleAppTest.Data.Model
+﻿using ConsoleAppTest.Data.Model.Base;
+
+namespace ConsoleAppTest.Data.Model
 {
-    public class AccountCityGroup
+    public class AccountCityGroup : BaseModelGroup
     {
         public decimal TotalSum { get; set; }
         public string City { get; set; }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppTest.Data.Model.Base
 {
-    public abstract class BaseModel
+    public abstract class BaseModel : IEntity
     {
         public long Id { get; set; }
     }
+
 }

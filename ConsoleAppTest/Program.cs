@@ -2,6 +2,8 @@
 using ConsoleAppTest.Data;
 using System.Threading.Tasks;
 using ConsoleAppTest.Data.Model;
+using System.Collections.Generic;
+using ConsoleAppTest.Data.Model.Base;
 
 namespace ConsoleAppTest
 {
@@ -21,6 +23,10 @@ namespace ConsoleAppTest
             displayaHandler.ShowBalanceByCity();
             displayaHandler.ShowDataViaView();
             displayaHandler.ShowBalanceByCityViaView();
+
+            var displayConsole = new DisplayConsole();
+            ICollection<Account> test = new List<Account>();
+            displayConsole.Print(test);
 
             var transfer = new AccountTransaction
             {

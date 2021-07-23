@@ -1,8 +1,9 @@
-﻿using System;
+﻿using ConsoleAppTest.Data.Model.Base;
+using System;
 
 namespace ConsoleAppTest.Data.Model
 {
-    public class BankDataGroup
+    public class BankDataGroup : BaseModelGroup
     {
         public string Name { get; set; }
         public string Address { get; set; }
