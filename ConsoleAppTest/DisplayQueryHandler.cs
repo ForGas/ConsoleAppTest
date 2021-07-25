@@ -114,19 +114,19 @@ namespace ConsoleAppTest
                 switch (entity.FullName())
                 {
                     case "City":
-                        _display.Print(_context.Cities.FromSqlRaw(sqlQuery).ToList());
+                        _display.Print(_context.Cities.FromSqlRaw(sqlQuery).AsNoTracking().ToList());
                         break;
                     case "Country":
-                        _display.Print(_context.Countries.FromSqlRaw(sqlQuery).ToList());
+                        _display.Print(_context.Countries.FromSqlRaw(sqlQuery).AsNoTracking().ToList());
                         break;
                     case "Account":
-                        _display.Print(_context.Accounts.FromSqlRaw(sqlQuery).ToList());
+                        _display.Print(_context.Accounts.FromSqlRaw(sqlQuery).AsNoTracking().ToList());
                         break;
                     case "BankClient":
-                        _display.Print(_context.BankClients.FromSqlRaw(sqlQuery).ToList());
+                        _display.Print(_context.BankClients.FromSqlRaw(sqlQuery).AsNoTracking().ToList());
                         break;
                     case "AccountTransaction":
-                        _display.Print(_context.AccountTransactions.FromSqlRaw(sqlQuery).ToList());
+                        _display.Print(_context.AccountTransactions.FromSqlRaw(sqlQuery).AsNoTracking().ToList());
                         break;
                 };
             }
