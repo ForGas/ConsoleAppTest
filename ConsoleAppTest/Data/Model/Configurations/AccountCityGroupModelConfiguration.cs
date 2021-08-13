@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ConsoleAppTest.Data.Model.Configurations
+namespace TaskEFConsoleApp.Data.Model.Configurations
 {
     class AccountCityGroupModelConfiguration : IEntityTypeConfiguration<AccountCityGroup>
     {

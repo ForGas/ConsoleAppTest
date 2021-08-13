@@ -1,6 +1,6 @@
-﻿using ConsoleAppTest.Data.Model;
+﻿using TaskEFConsoleApp.Data.Model;
 
-namespace ConsoleAppTest.Interfaces
+namespace TaskEFConsoleApp.Interfaces
 {
     public interface IQueryLocation<TCountry, TCity> : IQueryCity<string>, IQueryCountry<string>
         where TCountry : Country

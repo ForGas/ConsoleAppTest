@@ -1,7 +1,7 @@
-﻿using ConsoleAppTest.Data;
-using ConsoleAppTest.Data.Model;
+﻿using TaskEFConsoleApp.Data;
+using TaskEFConsoleApp.Data.Model;
 
-namespace WebApplicationTest.Repositories
+namespace TaskWebApp.Repositories
 {
     public class ClientRepository : BaseRepository<BankClient>
     {

@@ -1,4 +1,4 @@
-﻿namespace ConsoleAppTest.Interfaces
+﻿namespace TaskEFConsoleApp.Interfaces
 {
     public interface IQueryCity<T> : IQuery
     {

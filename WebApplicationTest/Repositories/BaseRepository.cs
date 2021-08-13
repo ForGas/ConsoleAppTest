@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using ConsoleAppTest.Data;
+using TaskEFConsoleApp.Data;
 using System.Collections.Generic;
-using ConsoleAppTest.Data.Model.Base;
+using TaskEFConsoleApp.Data.Model.Base;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApplicationTest.Repositories
+namespace TaskWebApp.Repositories
 {
     public abstract class BaseRepository<Entity> : IBaseRepository<Entity> where Entity : BaseModel
     {

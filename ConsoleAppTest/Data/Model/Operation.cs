@@ -1,4 +1,4 @@
-﻿namespace ConsoleAppTest.Data.Model
+﻿namespace TaskEFConsoleApp.Data.Model
 {
     public enum Operation
     {

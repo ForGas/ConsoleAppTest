@@ -1,8 +1,7 @@
-﻿using ConsoleAppTest.Data.Model;
-using ConsoleAppTest.Data.Model.Base;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TaskEFConsoleApp.Data.Model.Base;
 
-namespace ConsoleAppTest.Interfaces
+namespace TaskEFConsoleApp.Interfaces
 {
     public interface IDisplay
     {

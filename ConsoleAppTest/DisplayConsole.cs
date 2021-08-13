@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using ConsoleAppTest.Interfaces;
-using ConsoleAppTest.Data.Model.Base;
+using TaskEFConsoleApp.Interfaces;
+using TaskEFConsoleApp.Data.Model.Base;
 
-namespace ConsoleAppTest
+namespace TaskEFConsoleApp
 {
     public class DisplayConsole : IDisplay
     {

@@ -1,7 +1,7 @@
-﻿using ConsoleAppTest.Data.Model.Base;
+﻿using TaskEFConsoleApp.Data.Model.Base;
 using System.Collections.Generic;
 
-namespace WebApplicationTest.Repositories
+namespace TaskWebApp.Repositories
 {
     interface IBaseRepository<Entity> where Entity : BaseModel
     {

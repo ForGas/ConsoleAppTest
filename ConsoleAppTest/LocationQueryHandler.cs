@@ -1,10 +1,10 @@
-﻿using ConsoleAppTest.Data;
-using ConsoleAppTest.Data.Model;
-using ConsoleAppTest.Interfaces;
+﻿using TaskEFConsoleApp.Data;
+using TaskEFConsoleApp.Data.Model;
+using TaskEFConsoleApp.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace ConsoleAppTest
+namespace TaskEFConsoleApp
 {
     public class LocationQueryHandler : IQueryLocation<Country, City>
     {

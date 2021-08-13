@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Reflection;
-using ConsoleAppTest.Data.Model;
+using TaskEFConsoleApp.Data.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConsoleAppTest.Data
+namespace TaskEFConsoleApp.Data
 {
     public class ApplicationDbContext : DbContext
     {

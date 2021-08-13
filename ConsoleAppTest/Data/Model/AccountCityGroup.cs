@@ -1,6 +1,6 @@
-﻿using ConsoleAppTest.Data.Model.Base;
+﻿using TaskEFConsoleApp.Data.Model.Base;
 
-namespace ConsoleAppTest.Data.Model
+namespace TaskEFConsoleApp.Data.Model
 {
     public class AccountCityGroup : BaseModelGroup
     {

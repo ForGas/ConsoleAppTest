@@ -3,6 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+    <AssemblyName>TaskWebApp</AssemblyName>
+    <RootNamespace>TaskWebApp</RootNamespace>
+    <UserSecretsId>ee41e133-cb7d-42ab-9f84-dcc3ff204902</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleAppTest\ConsoleAppTest.csproj" />
+    <ProjectReference Include="..\ConsoleAppTest\TaskEFConsoleApp.csproj" />
   </ItemGroup>
 
 </Project>

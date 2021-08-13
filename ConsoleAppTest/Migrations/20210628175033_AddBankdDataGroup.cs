@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ConsoleAppTest.Migrations
+namespace TaskEFConsoleApp.Migrations
 {
     public partial class AddBankdDataGroup : Migration
     {

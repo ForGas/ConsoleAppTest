@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ConsoleAppTest.Migrations
+namespace TaskEFConsoleApp.Migrations
 {
     public partial class AddModelsTestApp : Migration
     {

@@ -1,13 +1,13 @@
-﻿using ConsoleAppTest.Data;
-using ConsoleAppTest.Data.Model;
+﻿using TaskEFConsoleApp.Data;
+using TaskEFConsoleApp.Data.Model;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplicationTest.Repositories;
+using TaskWebApp.Repositories;
 
-namespace WebApplicationTest.Controllers
+namespace TaskWebApp.Controllers
 {
     public class ClientController : Controller
     {

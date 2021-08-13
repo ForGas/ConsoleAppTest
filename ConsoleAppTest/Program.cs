@@ -1,11 +1,11 @@
 ﻿using System;
-using ConsoleAppTest.Data;
+using TaskEFConsoleApp.Data;
 using System.Threading.Tasks;
-using ConsoleAppTest.Data.Model;
+using TaskEFConsoleApp.Data.Model;
 using System.Collections.Generic;
-using ConsoleAppTest.Data.Model.Base;
+using TaskEFConsoleApp.Data.Model.Base;
 
-namespace ConsoleAppTest
+namespace TaskEFConsoleApp
 {
     class Program
     {

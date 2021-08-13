@@ -1,7 +1,7 @@
-﻿using ConsoleAppTest.Data.Model.Base;
+﻿using TaskEFConsoleApp.Data.Model.Base;
 using System;
 
-namespace ConsoleAppTest.Data.Model
+namespace TaskEFConsoleApp.Data.Model
 {
     public class BankClient : BaseModel
     {

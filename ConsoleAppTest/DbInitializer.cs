@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
-using ConsoleAppTest.Data;
+using TaskEFConsoleApp.Data;
 using System.Threading.Tasks;
-using ConsoleAppTest.Data.Model;
+using TaskEFConsoleApp.Data.Model;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConsoleAppTest
+namespace TaskEFConsoleApp
 {
     public class DbInitializer
     {

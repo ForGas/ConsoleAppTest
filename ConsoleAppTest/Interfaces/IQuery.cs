@@ -1,7 +1,7 @@
-﻿using ConsoleAppTest.Data.Model.Base;
+﻿using TaskEFConsoleApp.Data.Model.Base;
 using System.Reflection;
 
-namespace ConsoleAppTest.Interfaces
+namespace TaskEFConsoleApp.Interfaces
 {
     public interface IQuery
     {

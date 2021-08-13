@@ -1,4 +1,4 @@
-﻿namespace ConsoleAppTest.Data.Model.Base
+﻿namespace TaskEFConsoleApp.Data.Model.Base
 {
     public interface IEntity
     {

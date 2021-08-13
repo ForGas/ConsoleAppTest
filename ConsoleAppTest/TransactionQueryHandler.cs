@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
-using ConsoleAppTest.Data;
-using ConsoleAppTest.Data.Model;
-using ConsoleAppTest.Interfaces;
+using TaskEFConsoleApp.Data;
+using TaskEFConsoleApp.Data.Model;
+using TaskEFConsoleApp.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConsoleAppTest
+namespace TaskEFConsoleApp
 {
     public class TransactionQueryHandler : IQueryTransaction
     {

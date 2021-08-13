@@ -1,7 +1,7 @@
-﻿using ConsoleAppTest.Data.Model.Base;
-using System;
+﻿using System;
+using TaskEFConsoleApp.Data.Model.Base;
 
-namespace ConsoleAppTest.Data.Model
+namespace TaskEFConsoleApp.Data.Model
 {
     public class BankDataGroup : BaseModelGroup
     {

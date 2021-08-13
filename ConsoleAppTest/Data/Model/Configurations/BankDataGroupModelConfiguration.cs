@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppTest.Data.Model.Configurations
+namespace TaskEFConsoleApp.Data.Model.Configurations
 {
     class BankDataGroupModelConfiguration : IEntityTypeConfiguration<BankDataGroup>
     {
