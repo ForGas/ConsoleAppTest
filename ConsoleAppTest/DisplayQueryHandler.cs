@@ -31,16 +31,17 @@ namespace TaskEFConsoleApp
                                                                .Where(x => x.CountryId == country.Id)
                                                                .Select(x => x.Id)
                                                        select id).First()
-
+                           group account by new 
+                           { 
+                               cityName = city.Name,
+                               countryName = country.Name,
+                           } into balanceByCityGroup
                            select new AccountCityGroup
                            {
-                               TotalSum = account.Balance,
-                               Country = country.Name,
-                               City = city.Name
+                               TotalSum = balanceByCityGroup.Sum(x => x.Balance),
+                               Country = balanceByCityGroup.Key.cityName,
+                               City = balanceByCityGroup.Key.countryName
                            };
-
-            var gg = from account in accounts.GroupBy(x => x.City)
-                     select new { Balance = account.Sum(x => x.TotalSum) };
 
             _display.Print(accounts.ToList());
         }
