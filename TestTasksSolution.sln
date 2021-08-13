@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskEFConsoleApp", "ConsoleAppTest\TaskEFConsoleApp.csproj", "{036A93A6-92FF-4E01-9B57-36CCA4CBDB22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskEFConsoleApp", "TaskEFConsoleApp\TaskEFConsoleApp.csproj", "{036A93A6-92FF-4E01-9B57-36CCA4CBDB22}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskWebApp", "WebApplicationTest\TaskWebApp.csproj", "{44991829-1DDD-4E49-AC85-2C68193FD843}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskWebApp", "TaskWebApp\TaskWebApp.csproj", "{44991829-1DDD-4E49-AC85-2C68193FD843}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
